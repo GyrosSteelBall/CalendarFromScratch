@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/red"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:textColor="@android:color/black"
+            android:inputType="number"
+            android:gravity="bottom"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_textview"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Name"
+            android:textSize="30dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+    <Button
+        android:id="@+id/leftArrow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/LeftArrow"
+        android:onClick="setPreviousWeek"/>
+<Button
+    android:background="@null"
+    android:id="@+id/MonthYearTextDisplay"
+    android:onClick="goMonthly"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="2"
+    android:textAlignment="center"
+    android:textColor="@color/black"
+    android:textSize="23sp"
+    android:text="placeholder"/>
+
+        <Button
+            android:id="@+id/rightArrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/RightArrow"
+            android:onClick="setNextWeek"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Sunday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="Sun"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/biege" />
+
+        <Button
+            android:id="@+id/Monday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:text="Mon"/>
+        <Button
+            android:id="@+id/Tuesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:text="Tues"/>
+        <Button
+            android:id="@+id/Wednesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:text="Wed"/>
+        <Button
+            android:id="@+id/Thursday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:text="Thu"/>
+        <Button
+            android:id="@+id/Friday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:text="Fri"/>
+        <Button
+            android:id="@+id/Saturday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textColor="@color/biege"
+            android:layout_marginRight="20dp"
+            android:text="Sat"/>
+    </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/weekdaysRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/layout_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="My Library"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exercises"
+        android:textColor="@color/black"
+        android:background="@drawable/layout_bg"
+        android:textStyle="bold"
+        android:onClick="newExerciseAction"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Programs"
+        android:textColor="@color/black"
+        android:background="@drawable/layout_bg"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:onClick="programActivityAction"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Workouts"
+        android:textColor="@color/black"
+        android:background="@drawable/layout_bg"
+        android:textStyle="bold"
+        android:onClick="workoutActivityAction"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"/>
+
+    <ListView
+        android:id="@+id/eventListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
+
+
+
+
+</LinearLayout>

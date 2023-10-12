@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalendarFromScratch</string>
+    <string name="LeftArrow">◀</string>
+    <string name="RightArrow">▶</string>
+    <string name="LeftArrowTwo">&#8592;</string>
+    <string name="plus">&#x2B;</string>
+
+</resources>
